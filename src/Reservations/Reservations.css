@@ -1,0 +1,24 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5em;
+}
+
+article {
+  width: 15vw;
+  background-color: #FFFFFF;
+  color: teal;
+  border: solid teal 5px;
+  border-color: teal;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.cancelButton {
+  background-color: teal;
+  border: none;
+  color: white;
+  width: 12em;
+  height: 1.5em;
+}
