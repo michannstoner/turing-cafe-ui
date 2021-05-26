@@ -32,6 +32,12 @@ class Form extends Component {
           placeholder='Time'
           value={this.state.time}
         />
+        <input 
+          name='numberOfGuests'
+          type='number'
+          placeholder='Number of guests'
+          value={this.state.numberofGuests}
+        />
       </form>
     )
   }
