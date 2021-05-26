@@ -37,5 +37,12 @@ describe('Homepage', () => {
       .get('.resCard').should('have.length', 2)
   })
 
-
+  it('should submit a new reservation when make reservation button is clicked', () => {
+    cy.get('form > input[name="name"]').type('Third Name')
+      .get('input[name="date"]').type('05/28')
+      .get('input[name="time"]').type('4:00')
+      .get('input[name="number"]').type(5)
+      .get('.makeResButton').click()
+      .get('.resCard').should('have.length', 3)
+  })
 })
