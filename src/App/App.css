@@ -21,3 +21,21 @@
 .errorMessage {
   color: white;
 }
+
+.resy-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+input {
+  margin-right: 3em;
+  height: 2em;
+}
+
+.makeResButton {
+  background-color: teal;
+  border: solid white 1px;
+  color: white;
+  padding: 0.5em 2em;
+}
