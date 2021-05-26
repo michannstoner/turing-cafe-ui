@@ -13,7 +13,14 @@ class Form extends Component {
 
   render() {
     return (
-      <h1>hello</h1>
+      <form className='resForm'>
+        <input 
+          name='name'
+          type='text'
+          placeholder='Name'
+          value={this.state.name}
+        />
+      </form>
     )
   }
 }
