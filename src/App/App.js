@@ -23,7 +23,6 @@ class App extends Component {
     this.setState({ allReservations: [...this.state.allReservations, newReservation]})
   }
   render() {
-    console.log(this.state.allReservations);
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
