@@ -7,7 +7,7 @@ class Form extends Component {
       name: '',
       date: '',
       time: '',
-      numberOfGuests: 0
+      number: null
     }
   }
 
@@ -19,17 +19,18 @@ class Form extends Component {
     event.preventDefault()
     const newReservation = {
       id: Date.now(),
-      name: this.state.name,
-      date: this.state.date,
-      time: this.state.time,
-      numberOfGuests: this.state.numberOfGuests
+      ...this.state
     }
     this.props.createReservation(newReservation)
+    this.clearForm(event)
+  }
 
+  clearForm = event => {
+    event.preventDefault()
+    this.setState({ name: '', date: '', time: '', number: ''})
   }
 
   render() {
-    console.log(this.state);
     return (
       <form className='resForm'>
         <input 
@@ -54,11 +55,10 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
         <input 
-          name='numberOfGuests'
+          name='number'
           type='number'
           placeholder='Number of guests'
-          value={this.state.numberofGuests}
-          min='1'
+          value={this.state.number}
           onChange={event => this.handleChange(event)}
         />
         <button className='makeResButton' onClick={event => this.makeReservation(event)}>Make Reservation</button>
