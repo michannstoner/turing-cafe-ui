@@ -26,6 +26,12 @@ class Form extends Component {
           placeholder='Date (mm/dd)'
           value={this.state.date}
         />
+        <input 
+          name='time'
+          type='text'
+          placeholder='Time'
+          value={this.state.time}
+        />
       </form>
     )
   }
